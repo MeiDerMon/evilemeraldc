@@ -19,7 +19,7 @@ export class Field implements State.Field {
   defenderSide: Side;
 
   constructor(field: Partial<State.Field> = {}) {
-    this.gameType = field.gameType || 'Singles';
+    this.gameType = field.gameType || 'Doubles';
     this.terrain = field.terrain;
     this.weather = field.weather;
     this.isMagicRoom = !!field.isMagicRoom;
