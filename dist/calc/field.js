@@ -20,7 +20,7 @@ exports.__esModule = true;
 var Field = (function () {
     function Field(field) {
         if (field === void 0) { field = {}; }
-        this.gameType = field.gameType || 'Doubles';
+        this.gameType = field.gameType || 'Singles';
         this.terrain = field.terrain;
         this.weather = field.weather;
         this.isMagicRoom = !!field.isMagicRoom;

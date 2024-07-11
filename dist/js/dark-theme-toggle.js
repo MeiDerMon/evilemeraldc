@@ -21,8 +21,6 @@ if (prefersDarkTheme) {
 	if (darkStyles.disabled) {
 		darkStyles.disabled = !darkStyles.disabled;
 	}
-} else {
-	document.documentElement.style.setProperty("--fieldset-color", "white");
 }
 
 /*
@@ -32,9 +30,9 @@ if (prefersDarkTheme) {
 function toggleTheme() {
 	prefersDarkTheme = !prefersDarkTheme;
 	if (!prefersDarkTheme) {
-		document.documentElement.style.setProperty("--fieldset-color", "white");
+		document.documentElement.style.cssText = "--fieldset-color: white";
 	} else {
-		document.documentElement.style.setProperty("--fieldset-color", "#2a2a2a");
+		document.documentElement.style.cssText = "--fieldset-color: #2a2a2a";
 	}
 	var darkStyles = document.getElementById('dark-theme-styles');
 	darkStyles.disabled = !darkStyles.disabled;

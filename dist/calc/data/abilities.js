@@ -356,39 +356,7 @@ var SS = SM.concat([
     'Wind Rider',
     'Zero to Hero',
 ]);
-var SV = SS.concat([
-    'Anger Shell',
-    'Armor Tail',
-    'Beads of Ruin',
-    'Commander',
-    'Costar',
-    'Cud Chew',
-    'Earth Eater',
-    'Electromorphosis',
-    'Good as Gold',
-    'Guard Dog',
-    'Hadron Engine',
-    'Lingering Aroma',
-    'Mycelium Might',
-    'Opportunist',
-    'Orichalcum Pulse',
-    'Protosynthesis',
-    'Purifying Salt',
-    'Quark Drive',
-    'Rocky Payload',
-    'Seed Sower',
-    'Sharpness',
-    'Supreme Overlord',
-    'Sword of Ruin',
-    'Tablets of Ruin',
-    'Thermal Exchange',
-    'Toxic Debris',
-    'Vessel of Ruin',
-    'Well-Baked Body',
-    'Wind Power',
-    'Wind Rider',
-    'Zero to Hero',
-]);
+var SV = SS.concat([]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {
     function Abilities(gen) {

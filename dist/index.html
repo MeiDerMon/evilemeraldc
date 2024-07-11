@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>Pok&eacute;mon Damage Calculator</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
-    <link type="text/css" rel="stylesheet" href="./css/main.css?bab98f2f" />
+    <link type="text/css" rel="stylesheet" href="./css/main.css?540756c1" />
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./css/dark-theme.css" id="dark-theme-styles">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -37,6 +37,13 @@
 </head>
 
 <body class="dark-theme">
+    <nav><div class="header"><div class="header-color"><div class="header-inner">
+        <ul class="nav">
+            <li><a class="button nav-first" href="/">Pok&eacute;dex</a></li>
+            <li><a class="button nav-last button cur" href="//calc.runandbun.com">Calculator</a></li>
+        </ul>
+        <div style="clear:both"></div>
+    </div></div></div></nav>
 
 <div class="wrapper">
 
@@ -58,9 +65,6 @@
             <input class="mode visually-hidden" type="radio" name="mode" id="all-vs-one" />
             <input class="mode visually-hidden" type="radio" name="mode" id="randoms" />
         </span>
-        <button id="screen-calc">
-            put this calculation in a grabbable window
-        </button>
     </div>
     <hr />
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
@@ -118,70 +122,10 @@
             <span id="mainResult">Loading...</span>
             <span id="tooltipText">Copied</span>
         </div>
-        <div class="small-text">
-            <span id="damageValues"></span>
+        <div class="small-text"><span id="damageValues">(If you see this message for more than a few seconds, try enabling JavaScript.)</span>
         </div>
     </div>
-    <div aria-label="Move selection" class="move-result-group for-doubles" role="region" title="Select a move to show detailed results." hidden>
-        <div aria-labelledby="resultHeader2L" class="move-result-subgroup " role="radiogroup">
-            <div class="result-move-header"><span id="resultHeader2L">Pok&eacute;mon 1's Moves (select one to show detailed results)</span>
-            </div><!--ADDED FOR DOUBLES-->
-            <div>
-                <input class="result-move2 visually-hidden" type="radio" name="resultMove2" id="resultMove2L1" checked="checked" aria-describedby="resultDamage2L1" />
-                <label class="btn btn-xxxwide btn-top" for="resultMove2L1">Loading...</label>
-                <span id="resultDamage2L1">??? - ???%</span>
-            </div>
-            <div>
-                <input class="result-move2 visually-hidden" type="radio" name="resultMove2" id="resultMove2L2" aria-describedby="resultDamage2L2" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMove2L2">Loading...</label>
-                <span id="resultDamage2L2">??? - ???%</span>
-            </div>
-            <div>
-                <input class="result-move2 visually-hidden" type="radio" name="resultMove2" id="resultMove2L3" aria-describedby="resultDamage2L3" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMove2L3">Loading...</label>
-                <span id="resultDamage2L3">??? - ???%</span>
-            </div>
-            <div>
-                <input class="result-move2 visually-hidden" type="radio" name="resultMove2" id="resultMove2L4" aria-describedby="resultDamage2L4" />
-                <label class="btn btn-xxxwide btn-bottom" for="resultMove2L4">Loading...</label>
-                <span id="resultDamage2L4">??? - ???%</span>
-            </div>
-        </div>
-        <div aria-labelledby="resultHeader2R" class="move-result-subgroup" role="radiogroup">
-            <div class="result-move-header"><span id="resultHeader2R">Pok&eacute;mon 2's Moves (select one to show detailed results)</span>
-            </div>
-            <div>
-                <input class="result-move2 visually-hidden" type="radio" name="resultMove2" id="resultMove2R1" aria-describedby="resultDamage2R1" />
-                <label class="btn btn-xxxwide btn-top" for="resultMove2R1">Loading...</label>
-                <span id="resultDamage2R1">??? - ???%</span>
-            </div>
-            <div>
-                <input class="result-move2 visually-hidden" type="radio" name="resultMove2" id="resultMove2R2" aria-describedby="resultDamage2R2" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMove2R2">Loading...</label>
-                <span id="resultDamage2R2">??? - ???%</span>
-            </div>
-            <div>
-                <input class="result-move2 visually-hidden" type="radio" name="resultMove2" id="resultMove2R3" aria-describedby="resultDamage2R3" />
-                <label class="btn btn-xxxwide btn-mid" for="resultMove2R3">Loading...</label>
-                <span id="resultDamage2R3">??? - ???%</span>
-            </div>
-            <div>
-                <input class="result-move2 visually-hidden" type="radio" name="resultMove2" id="resultMove2R4" aria-describedby="resultDamage2R4" />
-                <label class="btn btn-xxxwide btn-bottom" for="resultMove2R4">Loading...</label>
-                <span id="resultDamage2R4">??? - ???%</span>
-            </div>
-        </div>
-    </div>
-    <div aria-label="Calculation results2" class="main-result-group for-doubles" role="region" hidden>
-        <div class="big-text" title="Click to copy."><!--ADDED FOR DOUBLES-->
-            <span id="mainResult2">Loading...</span>
-            <span id="tooltipText">Copied</span>
-        </div>
-        <div class="small-text">
-            <span id="damageValues2"></span>
-        </div>
-    </div>
-    <div class="left-side-pannel side-pannel" hidden>
+    <div class="left-side-pannel side-pannel">
         <button data-set="i-f-type" class="l-side-button">
             <i class="s-arrow arrowdown"></i>
             <span>Type</span>
@@ -202,9 +146,7 @@
     <div class="panel">
         <div aria-label="Pok&eacute;mon 1" role="region">
             <fieldset class="poke-info" id="p1">
-                <legend align="center">
-                    <button id="save-change" hidden>Save Changes</button>
-                    Pok&eacute;mon 1
+                <legend align="center">Pok&eacute;mon 1
                     <img id="p1mon" src="" alt="">
                 </legend>
                 <input type="text" class="set-selector calc-trigger player" />
@@ -233,7 +175,7 @@
                     </div>
                     <div>
                         <label for="levelL1">Level</label>
-                        <input class="level save-trigger calc-trigger" id="levelL1" value="100" />
+                        <input class="level calc-trigger" id="levelL1" value="100" />
                     </div>
                     <div class="hide">
                         <label for="weightL1">Weight (kg)</label>
@@ -262,7 +204,7 @@
                                     <input class="base calc-trigger" value="100" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
-                                    <input class="ivs save-trigger calc-trigger" value="31" />
+                                    <input class="ivs calc-trigger" value="31" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
                                     <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -282,7 +224,7 @@
                                     <input class="base calc-trigger" value="100" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
-                                    <input class="ivs save-trigger calc-trigger" value="31" />
+                                    <input class="ivs calc-trigger" value="31" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
                                     <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -318,7 +260,7 @@
                                     <input class="base calc-trigger" value="100" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
-                                    <input class="ivs save-trigger calc-trigger" value="31" />
+                                    <input class="ivs calc-trigger" value="31" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
                                     <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -354,7 +296,7 @@
                                     <input class="base calc-trigger" value="100" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
-                                    <input class="ivs save-trigger calc-trigger" value="31" />
+                                    <input class="ivs calc-trigger" value="31" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
                                     <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -390,7 +332,7 @@
                                     <input class="base calc-trigger" value="100" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
-                                    <input class="ivs save-trigger calc-trigger" value="31" />
+                                    <input class="ivs calc-trigger" value="31" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
                                     <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -456,7 +398,7 @@
                                     <input class="base calc-trigger" value="100" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
-                                    <input class="ivs save-trigger calc-trigger" value="31" />
+                                    <input class="ivs calc-trigger" value="31" />
                                 </td>
                                 <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
                                     <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -492,7 +434,7 @@
                 <div class="info-group info-selectors i-f-stats">
                     <div class="gen-specific g3 g4 g5 g6 g7 g8 g9">
                         <label for="natureL1">Nature</label>
-                        <select class="nature save-trigger calc-trigger" id="natureL1">
+                        <select class="nature calc-trigger" id="natureL1">
                             <option value="Adamant">Adamant (+Atk, -SpA)</option>
                             <option value="Bashful">Bashful</option>
                             <option value="Bold">Bold (+Def, -Atk)</option>
@@ -522,7 +464,7 @@
                     </div>
                     <div class="gen-specific g3 g4 g5 g6 g7 g8 g9">
                         <label for="abilityL1">Ability</label>
-                        <select class="ability terrain-trigger save-trigger calc-trigger" id="abilityL1"></select>
+                        <select class="ability terrain-trigger calc-trigger" id="abilityL1"></select>
                         <input hidden type="checkbox" title= "Is this ability active?" class="abilityToggle calc-trigger">
                             <select hidden aria-label="Allies fainted" class="alliesFainted calc-trigger">
                                     <option value="0">Zero allies fainted</option>
@@ -535,8 +477,7 @@
                     </div>
                     <div class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
                         <label for="itemL1">Item</label>
-                        <select class="item terrain-trigger save-trigger calc-trigger" id="itemL1"></select>
-                        <button id="ball-item"><img src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/key-item/berry-pouch.png" alt=""></button>
+                        <select class="item terrain-trigger calc-trigger" id="itemL1"></select>
                     </div>
                     <div>
                         <label for="statusL1">Status</label>
@@ -581,6 +522,8 @@
                     <input class="current-hp calc-trigger" id="currentHpL1" value="341" />/<span class="max-hp">341</span> (
                     <input class="percent-hp calc-trigger" value="100" />%)
                         <input class="visually-hidden max calc-trigger btn-input" type="checkbox" id="maxL" />
+                        <label class="btn btn-xwide gen-specific g8 hide" for="maxL"
+                        title="Use the corresponding Max Move?">Dynamax</label>
                         <br />
                     <br />
                     Health <div class="hpbar"></div>
@@ -588,7 +531,7 @@
                 <div hidden id="criticalHitInstruction">Force this attack to be a critical hit?</div>
                 <div hidden id="zMoveInstruction">Make this attack a Z-move?</div>
                 <div class="move1 i-f-move">
-                    <select class="move-selector save-trigger calc-trigger small-select"></select>
+                    <select class="move-selector calc-trigger small-select"></select>
                     <input class="move-bp calc-trigger" value="50" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9">
@@ -622,7 +565,7 @@
                     </select>
                 </div>
                 <div class="move2 i-f-move"">
-                    <select class="move-selector save-trigger calc-trigger small-select"></select>
+                    <select class="move-selector calc-trigger small-select"></select>
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9">
@@ -656,7 +599,7 @@
                     </select>
                 </div>
                 <div class="move3 i-f-move"">
-                    <select class="move-selector save-trigger calc-trigger small-select"></select>
+                    <select class="move-selector calc-trigger small-select"></select>
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9">
@@ -690,7 +633,7 @@
                     </select>
                 </div>
                 <div class="move4 i-f-move"">
-                    <select class="move-selector save-trigger calc-trigger small-select"></select>
+                    <select class="move-selector calc-trigger small-select"></select>
                     <input class="move-bp calc-trigger" value="0" />
                     <select class="move-type calc-trigger"></select>
                     <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9">
@@ -729,24 +672,32 @@
             <fieldset class="poke-info" id="trainer-mons">
                 <legend align="center">Team/Box</legend>
                 <div>
-                    <legend class="dropzone" align="center">Team</legend>
+                    <legend align="center">Team</legend>
                     <div id="team-poke-list" class="box-poke dropzone">
                     </div>
                 </div>
                 <hr>
                 <div>
-                    <legend class="dropzone" align="center">Box</legend>
+                    <legend align="center">Box</legend>
                     <div id="box-poke-list" class="box-poke dropzone">
                     </div>
                 </div>
                 <div>
-                    <legend class="dropzone" align="center">Box 2</legend>
+                    <legend align="center">Box 2</legend>
                     <div id="box-poke-list2" class="box-poke dropzone">
                     </div>
                 </div>
                 <hr>
                 <div>
-                    <legend align="center">Color Codes</legend>
+                    <legend align="center">Trash</legend>
+                    <div id="trash-box" class="box-poke dropzone">
+                    </div>
+                    <button class="deadzone" id="trash-pok">Remove Pokémon from the trash</button>
+                    <button class="deadzone" id="clearSets">Remove Pokémon from all boxes</button>
+                </div>
+                <hr>
+                <div>
+                    <legend align="center">Color Coding</legend>
                     <button id="show-cc">Show</button>
                     <button id="hide-cc" hidden>Hide</button>
                     <button id="refr-cc" hidden>Refresh</button>
@@ -781,20 +732,10 @@
                         </p>
                     </div>
                     <div id ="cc-sets" hidden>
-                        <input type="checkbox" name="cc-spe-border" id="cc-spe-border" checked>speed border
-                        <input type="checkbox" name="cc-ohko-color" id="cc-ohko-color" checked>OHKO color
-                        <input type="checkbox" name="cc-auto-refr" id="cc-auto-refr" autocomplete="off">auto-refresh
-                        <input min="1" max="5" type="range" name="cc-spe-width" id="cc-spe-width">Speed Border width
+                        <input type="checkbox" name="cc-spe-border" id="cc-spe-border" checked>Speed Border
+                        <input type="checkbox" name="cc-ohko-color" id="cc-ohko-color" checked>OHKO Color
+                        <input type="checkbox" name="cc-auto-refr" id="cc-auto-refr" autocomplete="off">Auto-Refresh
                     </div>
-                </div>
-                <hr>
-                <div>
-                    <legend class="dropzone" align="center">Trash</legend>
-                    <div id="trash-box" class="box-poke dropzone" data-placeholder="">
-                        
-                    </div>
-                    <button class="deadzone" id="trash-pok">Remove Pokémon from the trash</button>
-                    <button class="deadzone" id="clearSets">Remove Pokémon from all boxes</button>
                 </div>
             </fieldset>
         </div>
@@ -1145,16 +1086,11 @@
             </fieldset>
         </div>
         <div aria-label="Import team" role="region">
-            <fieldset class="note-button">
-                <legend align="center">Note</legend>
-                <button id="open-note">Open Notes</button>
-            </fieldset>
-        </div>
-        <div aria-label="Import team" role="region">
             <fieldset class="poke-import">
                 <legend align="center">Import / Export</legend>
                 <div id="import-1_wrapper" class="dataTables_wrapper no-footer">
                     <form class="import-team">
+                        <input class="import-name-text" value="Custom Set"></input>
                         <textarea class="import-team-text"></textarea>
                         <!--<button style='position:absolute' class='bs-btn bs-btn-default'>Import</button>-->
                     </form>
@@ -1541,6 +1477,8 @@
                     <input class="current-hp calc-trigger" id="currentHpR1" value="341" />/<span class="max-hp">341</span> (
                     <input class="percent-hp calc-trigger" value="100" />%)
                         <input class="visually-hidden max calc-trigger btn-input" type="checkbox" id="maxR" />
+                        <label class="btn btn-xwide gen-specific g8 hide" for="maxR"
+                        title="Use the corresponding Max Move?">Dynamax</label>
                         <br />
                     <br />
                     Health <div class="hpbar"></div>
@@ -1687,23 +1625,27 @@
             <fieldset class="poke-info" id="trainer-mons">
                 <legend align="center"> OPPOSING TEAM</legend>
                 <div class="trainer-poks">
-                    <div id="trainer-pok-list-opposing" class="trainer-pok-list-opposing dropzone calc-trigger">
+                    <div class="trainer-pok-list-opposing">
+                        <div class="trainer-pok-container">
+                            <img class="trainer-pok-opposing" src="https://play.pokemonshowdown.com/sprites/gen5/charizard.png" title="Focus Blast 120">
+                        </div>
                     </div>
-                    <div id="trainer-pok-list-opposing2" class="dropzone calc-trigger" 
-                    data-placeholder=" For doubles you can drag & drop the opposing pokemons here,
-                     only the first one off each row will be calculated against. Top left always top calc and Bot left always bot calc" hidden>
-                    </div>
+                    <!--div class="trainer-pok-list-opposing2" hidden>
+                        <div class="trainer-pok-container2">
+                            
+                        </div>
+                    </div-->
                 </div>
                 <!--hr>
                 <button id="set-double-opp">Set in doubles</button-->
                 <hr>
                 <button type="button" id="previous-trainer"> Previous Trainer</button>
                 <button type="button" id="next-trainer"> Next Trainer</button>
-                <button type="button" id="reset-trainer">Truck</button>
+                <button type="button" id="reset-trainer">Reset</button>
             </fieldset>
         </div>
     </div>
-    <div class="right-side-pannel side-pannel" hidden>
+    <div class="right-side-pannel side-pannel">
         <button data-set="i-f-o-type" class="r-side-button">
             <i class="s-arrow arrowdown"></i>
             <span>Type</span>
@@ -1721,138 +1663,12 @@
             <span>Moves</span>
         </button>
     </div>
-    <div id="item-box-frame" class="box-frame" hidden>
-        <div class="box-frame-header" data-x="500"data-y="500">
-            <legend>Items</legend>
-            <div class="close-frame" id="close-item-box">
-                <div class="mdiv">
-                  <div class="md"></div>
-                </div>
-              </div>
-        </div>
-        <div class="item-box-body">
-            <legend>Damage</legend>
-            <div class="box-item-list">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/silk-scarf.png" data-id="Silk Scarf">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/silver-powder.png" data-id="Silver Powder">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/poison-barb.png" data-id="Poison Barb">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/soft-sand.png" data-id="Soft Sand">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/miracle-seed.png" data-id="Miracle Seed">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/metal-coat.png" data-id="Metal Coat">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/mystic-water.png" data-id="Mystic Water">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/magnet.png" data-id="Magnet">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/hard-stone.png" data-id="Hard Stone">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/never-melt-ice.png" data-id="Nevermelt Ice">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/dragon-fang.png" data-id="Dragon Fang">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/charcoal.png" data-id="Charcoal">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/black-glasses.png" data-id="Black Glasses">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/sharp-beak.png" data-id="Sharp Beak">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/twisted-spoon.png" data-id="Twisted Spoon">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/plate/pixie.png" data-id="Pixie Plate">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/black-belt.png" data-id="Black Belt">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/spell-tag.png" data-id="Spell Tag">
-            </div>
-            <hr>
-            <legend>Held</legend>
-            <div class="box-item-list">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/wide-lens.png" data-id="Wide Lens">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/muscle-band.png" data-id="Muscle Band">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/wise-glasses.png" data-id="Wise Glasses">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/protective-pads.png" data-id="Protective Pads">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/zoom-lens.png" data-id="Zoom Lens">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/evo-item/razor-claw.png" data-id="Razor Claw">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/evo-item/razor-fang.png" data-id="Razor Fang">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/kings-rock.png" data-id="King's Rock">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/life-orb.png" data-id="Life Orb">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/metronome.png" data-id="Metronome">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/shell-bell.png" data-id="Shell Bell">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/expert-belt.png" data-id="Expert Belt">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/assault-vest.png" data-id="Assault Vest">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/leftovers.png" data-id="Leftovers">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/choice-band.png" data-id="Choice Band">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/choice-scarf.png" data-id="Choice Scarf">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/choice-specs.png" data-id="Choice Specs">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/rocky-helmet.png" data-id="Rocky Helmet">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/heavy-duty-boots.png" data-id="Heavy Duty Boots">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/white-herb.png" data-id="White Herb">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/shed-shell.png" data-id="Shed Shell">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/electric-seed.png" data-id="Electric Seed">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/grassy-seed.png" data-id="Grassy Seed">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/misty-seed.png" data-id="Misty Seed">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/psychic-seed.png" data-id="Psychic Seed">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/power-herb.png" data-id="Power Herb">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/mental-herb.png" data-id="Mental Herb">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/room-service.png" data-id="Room Service">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/eject-button.png" data-id="Eject Button">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/eject-pack.png" data-id="Eject Pack">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/red-card.png" data-id="Red Card">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/focus-sash.png" data-id="Focus Sash">
-            </div>
-            <hr>
-            <legend>Gems</legend>
-            <div class="box-item-list">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/bug.png" data-id="Bug Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/dark.png" data-id="Dark Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/steel.png" data-id="Steel Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/water.png" data-id="Water Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/fire.png" data-id="Fire Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/grass.png" data-id="Grass Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/electric.png" data-id="Electric Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/ground.png" data-id="Ground Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/flying.png" data-id="Grass Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/fairy.png" data-id="Fairy Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/psychic.png" data-id="Psychic Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/fighting.png" data-id="Fighting Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/ghost.png" data-id="Ghost Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/dragon.png" data-id="Dragon Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/ice.png" data-id="Ice Gem">
-                <img class="ic save-trigger"src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/rock.png" data-id="Rock Gem">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/poison.png" data-id="Poison Gem">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/gem/normal.png" data-id="Normal Gem">
-            </div>
-            <hr>
-            <legend>Damage reduction Berry</legend>
-            <div class="box-item-list"> 
-                <img class="berry-bb ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/babiri.png" data-id="Babiri Berry">
-                <img class="berry-cr ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/charti.png" data-id="Charti Berry">
-                <img class="berry-cl ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/chilan.png" data-id="Chilan Berry">
-                <img class="berry-cp ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/chople.png" data-id="Chople Berry">
-                <img class="berry-co ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/coba.png" data-id="Coba Berry">
-                <img class="berry-cb ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/colbur.png" data-id="Colbur Berry">
-                <img class="berry-ha ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/haban.png" data-id="Haban Berry">
-                <img class="berry-ka ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/kasib.png" data-id="Kasib Berry">
-                <img class="berry-ke ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/kebia.png" data-id="Kebia Berry">
-                <img class="berry-oc ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/occa.png" data-id="Occa Berry">
-                <img class="berry-ps ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/passho.png" data-id="Passho Berry">
-                <img class="berry-py ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/payapa.png" data-id="Payapa Berry">
-                <img class="berry-ri ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/rindo.png" data-id="Rindo Berry">
-                <img class="berry-ro ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/roseli.png" data-id="Roseli Berry">
-                <img class="berry-sh ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/shuca.png" data-id="Shuca Berry">
-                <img class="berry-ta ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/tanga.png" data-id="Tanga Berry">
-                <img class="berry-wa ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/wacan.png" data-id="Wacan Berry">
-                <img class="berry-ya ic save-trigger"  src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/yache.png" data-id="Yache Berry">
-            </div>
-            <hr>
-            <legend>Berries</legend>
-            <div class="box-item-list">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/oran.png" data-id="Oran Berry">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/sitrus.png" data-id="Sitrus Berry">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/lum.png" data-id="Lum Berry">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/pecha.png" data-id="Pecha Berry">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/chesto.png" data-id="Chesto Berry">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/rawst.png" data-id="Rawst Berry">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/aspear.png" data-id="Aspear Berry">
-                <img class="ic save-trigger" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/berry/persim.png" data-id="Persim Berry">
-            </div>
-        </div>
-    </div>
     <script type="text/javascript">
         var linkExtension = '.html';
     </script>
     <script type="text/javascript" src="./js/vendor/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="./js/vendor/select2/select2.min.js"></script>
     <script type="text/javascript" src="./js/vendor/url-search-params-0.1.2.min.js"></script>
-    <script type="text/javascript" src="./js/vendor/interact.min.js"></script>
     <script type="text/javascript">
         this.__createBinding = function(o, m, k) {
             o[k] = m[k];
@@ -1862,41 +1678,40 @@
     </script>
     <script type="text/javascript" src="./calc/util.js?8fa0c7ff"></script>
     <script type="text/javascript" src="./calc/stats.js?9220179f"></script>
-    <script type="text/javascript" src="./calc/data/species.js?656bfcec"></script>
-	<script type="text/javascript" src="./js/data/sets/gen9.js?e4da7b1c"></script>
-    <script type="text/javascript" src="./js/data/sets/gen8.js?21c7efcf"></script>
-    <script type="text/javascript" src="./js/data/sets/gen7.js?5f5ba850"></script>
-    <script type="text/javascript" src="./js/data/sets/gen6.js?eaf8dc5f"></script>
-    <script type="text/javascript" src="./js/data/sets/gen5.js?d8d4ab96"></script>
-    <script type="text/javascript" src="./js/data/sets/gen4.js?1cca0e4b"></script>
-    <script type="text/javascript" src="./js/data/sets/gen3.js?1750a100"></script>
-    <script type="text/javascript" src="./js/data/sets/gen2.js?8534fa4a"></script>
-    <script type="text/javascript" src="./js/data/sets/gen1.js?6b6723b2"></script>
-    <script type="text/javascript" src="./js/data/truck.js"></script>
+    <script type="text/javascript" src="./calc/data/species.js?b73ca9e1"></script>
+	<script type="text/javascript" src="./js/data/sets/gen9.js?6eb5d131"></script>
+    <script type="text/javascript" src="./js/data/sets/gen8.js?5aa10740"></script>
+    <script type="text/javascript" src="./js/data/sets/gen7.js?78168bde"></script>
+    <script type="text/javascript" src="./js/data/sets/gen6.js?2219279f"></script>
+    <script type="text/javascript" src="./js/data/sets/gen5.js?c8933737"></script>
+    <script type="text/javascript" src="./js/data/sets/gen4.js?c6ea7dc0"></script>
+    <script type="text/javascript" src="./js/data/sets/gen3.js?a470a1a8"></script>
+    <script type="text/javascript" src="./js/data/sets/gen2.js?7fd2ab00"></script>
+    <script type="text/javascript" src="./js/data/sets/gen1.js?428f44e9"></script>
     <script type="text/javascript" src="./calc/data/types.js?feda570f"></script>
     <script type="text/javascript" src="./calc/data/natures.js?04f00dc5"></script>
-    <script type="text/javascript" src="./calc/data/abilities.js?7db1af46"></script>
-    <script type="text/javascript" src="./calc/data/moves.js?faddfd23"></script>
+    <script type="text/javascript" src="./calc/data/abilities.js?d3246c97"></script>
+    <script type="text/javascript" src="./calc/data/moves.js?3a6c38d2"></script>
     <script type="text/javascript" src="./calc/data/items.js?65549879"></script>
     <script type="text/javascript" src="./calc/data/index.js?083d2bc9"></script>
     <script type="text/javascript" src="./calc/move.js?48331ad1"></script>
     <script type="text/javascript" src="./calc/pokemon.js?ea90f3ad"></script>
-    <script type="text/javascript" src="./calc/field.js?f22b534a"></script>
+    <script type="text/javascript" src="./calc/field.js?2c7f95da"></script>
     <script type="text/javascript" src="./calc/items.js?6c1bfef0"></script>
-    <script type="text/javascript" src="./calc/mechanics/util.js?a5341ee0"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen789.js?0b48e16e"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen56.js?cce0a8c6"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen4.js?4ddec1cb"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen3.js?cb5c8196"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen12.js?dcacf6cc"></script>
+    <script type="text/javascript" src="./calc/mechanics/util.js?5d154559"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen789.js?a8642544"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen56.js?326e578d"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen4.js?7d2b7674"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen3.js?2fa3d6a1"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen12.js?637dd485"></script>
     <script type="text/javascript" src="./calc/calc.js?cd072314"></script>
     <script type="text/javascript" src="./calc/desc.js?f9b3565c"></script>
     <script type="text/javascript" src="./calc/result.js?d5c7552b"></script>
     <script type="text/javascript" src="./calc/adaptable.js?afeb3759"></script>
     <script type="text/javascript" src="./calc/index.js?2377cbc8"></script>
-    <script type="text/javascript" src="./js/shared_controls.js?89ed3199"></script>
-    <script type="text/javascript" src="./js/index_randoms_controls.js?0a0407ae"></script>
-    <script type="text/javascript" src="./js/moveset_import.js?a3935810"></script>
+    <script type="text/javascript" src="./js/shared_controls.js?261260dc"></script>
+    <script type="text/javascript" src="./js/index_randoms_controls.js?34234c00"></script>
+    <script type="text/javascript" src="./js/moveset_import.js?7a7954dd"></script>
 </div>
 
 <div class="credits">Modification by ForwardFeed Originaly Created by Honko, maintained by Austin and Kris, Special thanks to Hzla
@@ -1905,29 +1720,11 @@
         <br>
         <li><a href="https://github.com/smogon/damage-calc/contributors" class="links-lighten" target="_blank">Smogon Contributors</a></li>
         <li><a href="https://www.smogon.com/forums/threads/pok%C3%A9mon-showdown-damage-calculator.3593546/" class="links-lighten" target="_blank">Smogon Bug Reports</a></li>
-        <li><a href="https://github.com/smogon/damage-calc" class="links-lighten" target="_blank">Smogon GitHub repository</a></li>
-    </ul>
-    <div id="sets">
+        <li><a href="https://github.com/smogon/damage-calc" class="links-lighten" target="_blank">Smogon GitHub repository</a></li></ul>
+    
         <button type="button" id="dark-theme-toggle"></button>
-        <script type="text/javascript" src="./js/dark-theme-toggle.js?be118517"></script>
-        <button id="side-arrow-toggle" data-id="true">Show Side Arrows</button>
-        <button id="double-legacy-mode">Doubles Modern</button>
-        <a href="runandbun_script_imports.lua" download="lua_script_for_export">Download Lua Script</a>
-        <a href="img/AI_flowchart_R&B.png" target="_blank" rel="noopener noreferrer">Flowchart of the AI</a>
+        <script type="text/javascript" src="./js/dark-theme-toggle.js?b8bb93fc"></script>
     </div>
-</div>
-
-<div id="note-box-frame" class="box-frame" hidden>
-    <div class="box-frame-header" data-x="1220"data-y="200">
-        <legend>Notes</legend>
-        <div class="close-frame" id="close-note-box">
-            <div class="mdiv">
-              <div class="md"></div>
-            </div>
-          </div>
-    </div>
-    <textarea cols="30" rows="10"></textarea>
-</div>
 
 </body>
 

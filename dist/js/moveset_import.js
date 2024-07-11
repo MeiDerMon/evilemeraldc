@@ -4,21 +4,11 @@ function placeBsBtn() {
 
 	$("#import.bs-btn").click(function () {
 		var pokes = document.getElementsByClassName("import-team-text")[0].value;
-		var name = "Custom Set";
+		var name = document.getElementsByClassName("import-name-text")[0].value.trim() === "" ? "Custom Set" : document.getElementsByClassName("import-name-text")[0].value;
 		addSets(pokes, name);
 		//erase the import text area
 		document.getElementsByClassName("import-team-text")[0].value="";
 	});
-}
-
-
-/*
-	for now only save the current trainer #p1
-*/
-function saveTrainerPokemon(){
-	$('#save-change').attr("hidden", true);
-	ExportPokemon($("#p1"));
-	$("#import.bs-btn").click()
 }
 
 function ExportPokemon(pokeInfo) {
@@ -68,21 +58,14 @@ function ExportPokemon(pokeInfo) {
 	}
 	finalText = finalText.trim();
 	$("textarea.import-team-text").val(finalText);
-	return finalText;
 }
 
 $("#exportL").click(function () {
-	var exportData = ExportPokemon($("#p1"));
-	$("textarea.import-team-text").val(exportData);
-	navigator.clipboard.writeText(exportData).then(function () {
-	});
+	ExportPokemon($("#p1"));
 });
 
 $("#exportR").click(function () {
-	var exportData = ExportPokemon($("#p2"));
-	$("textarea.import-team-text").val(exportData);
-	navigator.clipboard.writeText(exportData).then(function () {
-	});
+	ExportPokemon($("#p2"));
 });
 
 function serialize(array, separator) {
@@ -172,7 +155,7 @@ function getStats(currentPoke, rows, offset) {
 		}
 
 		currentNature = rows[x] ? rows[x].trim().split(" ") : '';
-		if (currentNature[1] == "Nature") {
+		if (currentNature[1] == "Nature" && currentNature[2] != "Power") {
 			currentPoke.nature = currentNature[0];
 		}
 	}
@@ -290,20 +273,12 @@ function updateDex(customsets) {
 	}
 	localStorage.customsets = JSON.stringify(customsets);
 }
-function sortImports (a,b){
-	var sorted = [a.name, b.name].sort()[0]
-	if (sorted == b.name){
-		return 1
-	}
-	return -1
-}
 
 function addSets(pokes, name) {
 	var rows = pokes.split("\n");
 	var currentRow;
 	var currentPoke;
 	var addedpokes = 0;
-	var pokelist = []
 	for (var i = 0; i < rows.length; i++) {
 		currentRow = rows[i].split(/[()@]/);
 		for (var j = 0; j < currentRow.length; j++) {
@@ -322,18 +297,12 @@ function addSets(pokes, name) {
 				currentPoke.teraType = getTeraType(rows[i + 1].split(":"));
 				currentPoke = getStats(currentPoke, rows, i + 1);
 				currentPoke = getMoves(currentPoke, rows, i);
-				if (currentPoke.nature == "-") {
-					currentPoke.nature = "Serious";
-				}
-				pokelist.push(currentPoke);
+				addToDex(currentPoke);
+				addBoxed(currentPoke);
 				addedpokes++;
 				break;
 			}
 		}
-	}
-	pokelist.sort(sortImports)
-	for(var i=0 ; i<pokelist.length; i++){
-		addToDex(pokelist[i]);
 	}
 	if (addedpokes > 0) {
 		$(allPokemon("#importedSetsOptions")).css("display", "inline");

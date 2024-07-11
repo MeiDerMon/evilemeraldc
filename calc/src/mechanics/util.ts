@@ -484,15 +484,13 @@ export function getEVDescriptionText(
      Stats.displayStat(stat));
 }
 
-export function handleFixedDamageMoves(attacker: Pokemon, move: Move, defender: Pokemon) {
+export function handleFixedDamageMoves(attacker: Pokemon, move: Move) {
   if (move.named('Seismic Toss', 'Night Shade')) {
     return attacker.level;
   } else if (move.named('Dragon Rage')) {
     return 40;
   } else if (move.named('Sonic Boom')) {
     return 20;
-  } else if (move.named('Super Fang')){
-    return Math.floor(defender.originalCurHP / 2) > 0 ? Math.floor(defender.originalCurHP / 2) : 1;
   }
   return 0;
 }
