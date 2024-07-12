@@ -1,5 +1,5 @@
 var SETDEX_SS = {
-    Ralts: {
+	Ralts: {
 		"Rival 103 Aron": {
 			level: 8,
 			ability: "Pixilate",
@@ -19,7 +19,7 @@ var SETDEX_SS = {
 			index: 7,
 		},
 	},
-    Weedle: {
+	Weedle: {
 		"Rival 103 Aron": {
 			level: 8,
 			ability: "Adaptability",
@@ -39,7 +39,7 @@ var SETDEX_SS = {
 			index: 3,
 		},
 	},
-    Pidgey: {
+	Pidgey: {
 		"Rival 103 Aron": {
 			level: 8,
 			ability: "Galvanize",
@@ -88,7 +88,7 @@ var SETDEX_SS = {
 			index: 6,
 		},
 	},
-    Poochyena: {
+	Poochyena: {
 		"Youngster Calvin": {
 			level: 15,
 			ability: "Intimidate",
@@ -99,7 +99,7 @@ var SETDEX_SS = {
 			index: 9,
 		},
 	},
-    Litten: {
+	Litten: {
 		"Youngster Calvin": {
 			level: 15,
 			ability: "Intimidate",
@@ -110,7 +110,7 @@ var SETDEX_SS = {
 			index: 10,
 		},
 	},
-    Shinx: {
+	Shinx: {
 		"Youngster Calvin": {
 			level: 15,
 			ability: "Intimidate",
@@ -121,7 +121,7 @@ var SETDEX_SS = {
 			index: 11,
 		},
 	},
-    Cascoon: {
+	Cascoon: {
 		"Bug Catcher Rick": {
 			level: 15,
 			ability: "Rough Skin",
@@ -132,7 +132,7 @@ var SETDEX_SS = {
 			index: 12,
 		},
 	},
-    Metapod: {
+	Metapod: {
 		"Bug Catcher Rick": {
 			level: 15,
 			ability: "Shed Skin",
@@ -143,7 +143,7 @@ var SETDEX_SS = {
 			index: 13,
 		},
 	},
-    Dewpider: {
+	Dewpider: {
 		"Bug Catcher Rick": {
 			level: 15,
 			ability: "Water Bubble",
@@ -154,7 +154,7 @@ var SETDEX_SS = {
 			index: 14,
 		},
 	},
-    Anorith: {
+	Anorith: {
 		"Bug Catcher Rick": {
 			level: 15,
 			ability: "Battle Armor",
@@ -165,81 +165,86 @@ var SETDEX_SS = {
 			index: 15,
 		},
 	},
-    Azurill: {
-        'Youngster Allen': {
-            level: 15,
-            ability: 'Huge Power',
-            moves: ['Helping Hand', 'Charm', 'Facade', 'Aqua Jet'],
-            nature: 'Adamant',
-            item: 'Oran Berry',
-            iv: { hp: 10, at: 20, df: 4, sa: 0, sd: 4, sp: 10 },
-            index: 16,
-        },
-    },
+	Azurill: {
+		"Youngster Allen": {
+			level: 15,
+			ability: "Huge Power",
+			moves: ["Helping Hand", "Charm", "Facade", "Aqua Jet"],
+			nature: "Adamant",
+			item: "Oran Berry",
+			iv: { hp: 10, at: 20, df: 4, sa: 0, sd: 4, sp: 10 },
+			index: 16,
+		},
+	},
 	Taillow: {
-        'Youngster Allen': {
-            level: 15,
-            ability: 'Guts',
-            moves: ['Quick Attack', 'Wing Attack', 'Whirlwind', 'Thief'],
-            nature: 'Adamant',
-            item: 'Oran Berry',
-            iv: { hp: 8, at: 20, df: 4, sa: 0, sd: 4, sp: 12 },
-            index: 17,
-        },
+		"Youngster Allen": {
+			level: 15,
+			ability: "Guts",
+			moves: ["Quick Attack", "Wing Attack", "Whirlwind", "Thief"],
+			nature: "Adamant",
+			item: "Oran Berry",
+			iv: { hp: 8, at: 20, df: 4, sa: 0, sd: 4, sp: 12 },
+			index: 17,
+		},
 	},
 	Zigzagoon: {
-        'Youngster Allen': {
-            level: 15,
-            ability: 'Quick Feet',
-            moves: ['Protect', 'Rollout', 'Headbutt', 'Retaliate'],
-            nature: 'Adamant',
-            item: 'Oran Berry',
-            iv: { hp: 8, at: 12, df: 12, sa: 0, sd: 12, sp: 4 },
-            index: 18,
-        },
+		"Youngster Allen": {
+			level: 15,
+			ability: "Quick Feet",
+			moves: ["Protect", "Rollout", "Headbutt", "Retaliate"],
+			nature: "Adamant",
+			item: "Oran Berry",
+			iv: { hp: 8, at: 12, df: 12, sa: 0, sd: 12, sp: 4 },
+			index: 18,
+		},
 	},
-    Pichu: {
-        'Lass Tiana': {
-            level: 15,
-            ability: 'Transistor',
-            moves: ['Nuzzle', 'Nasty Plot', 'Disarming Voice', 'Thunder Shock'],
-            nature: 'Modest',
-            item: 'Oran Berry',
-            iv: { hp: 8, at: 0, df: 4, sa: 20, sd: 4, sp: 12 },
-            index: 19,
-        },
-    },
-    Rowlet: {
-        'Lass Tiana': {
-            level: 15,
-            ability: 'Defiant',
-            moves: ['Aerial Ace', 'Shadow Sneak', 'Razor Leaf', 'Light Screen'],
-            nature: 'Relaxed',
-            item: 'Oran Berry',
-            iv: { hp: 20, at: 8, df: 8, sa: 0, sd: 8, sp: 4 },
-            index: 20,
-        },
-    },
-    Growlithe: {
-        'Lass Tiana': {
-            level: 15,
-            ability: 'Intimidate',
-            moves: ['Bite', 'Flame Wheel', 'Thunder Fang', 'Will-O-Wisp'],
-            nature: 'Adamant',
-            item: 'Oran Berry',
-            iv: { hp: 8, at: 20, df: 4, sa: 0, sd: 4, sp: 12 },
-            index: 21,
-        },
-    },
-    Cleffa: {
-        'Lass Tiana': {
-            level: 15,
-            ability: 'Friend Guard',
-            moves: ['Disarming Voice', 'Heal Pulse', 'Thunder Wave', 'Helping Hand'],
-            nature: 'Calm',
-            item: 'Oran Berry',
-            iv: { hp: 16, at: 0, df: 12, sa: 4, sd: 12, sp: 4 },
-            index: 22,
-        },
-    },
+	Pichu: {
+		"Lass Tiana": {
+			level: 15,
+			ability: "Transistor",
+			moves: ["Nuzzle", "Nasty Plot", "Disarming Voice", "Thunder Shock"],
+			nature: "Modest",
+			item: "Oran Berry",
+			iv: { hp: 8, at: 0, df: 4, sa: 20, sd: 4, sp: 12 },
+			index: 19,
+		},
+	},
+	Rowlet: {
+		"Lass Tiana": {
+			level: 15,
+			ability: "Defiant",
+			moves: ["Aerial Ace", "Shadow Sneak", "Razor Leaf", "Light Screen"],
+			nature: "Relaxed",
+			item: "Oran Berry",
+			iv: { hp: 20, at: 8, df: 8, sa: 0, sd: 8, sp: 4 },
+			index: 20,
+		},
+	},
+	Growlithe: {
+		"Lass Tiana": {
+			level: 15,
+			ability: "Intimidate",
+			moves: ["Bite", "Flame Wheel", "Thunder Fang", "Will-O-Wisp"],
+			nature: "Adamant",
+			item: "Oran Berry",
+			iv: { hp: 8, at: 20, df: 4, sa: 0, sd: 4, sp: 12 },
+			index: 21,
+		},
+	},
+	Cleffa: {
+		"Lass Tiana": {
+			level: 15,
+			ability: "Friend Guard",
+			moves: [
+				"Disarming Voice",
+				"Heal Pulse",
+				"Thunder Wave",
+				"Helping Hand",
+			],
+			nature: "Calm",
+			item: "Oran Berry",
+			iv: { hp: 16, at: 0, df: 12, sa: 4, sd: 12, sp: 4 },
+			index: 22,
+		},
+	},
 };
